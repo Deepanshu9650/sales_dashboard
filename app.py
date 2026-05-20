@@ -78,10 +78,8 @@ st.divider()
 st.subheader("Ask AI about your sales data")
 
 # ── Setup Groq AI ─────────────────────────────────────────────
-GGROQ_API_KEY = st.secrets["GROQ_API_KEY"]  # paste your gsk_... key here
-
 llm = ChatGroq(
-    api_key=GROQ_API_KEY,
+    api_key=st.secrets["GROQ_API_KEY"],
     model_name="llama-3.3-70b-versatile"
 )
 
